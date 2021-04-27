@@ -1,0 +1,21 @@
+<!--index.wxml-->
+<view class="container">
+    <view class="userinfo">
+        <open-data type="userAvatarUrl" class="userinfo-avatar"></open-data>
+        <view class="user-motto">
+            <open-data type="userNickName" class="userinfo"></open-data>
+            <text>: {{motto}}</text>
+        </view>
+    </view>
+    <view class="main">
+        <view class="operate">
+            <input value="" confirm-type="done" placeholder="请输入事件" bindinput="todoInput"></input>
+            <button form-type="submit" bindtap="handleSubmit">提交</button>
+        </view>
+        <view class="todo-list">
+            <ul wx:for="{{todoList}}" wx:for-index="todoList" wx:for-item="item">
+                <li >1{{item}}</li>
+            </ul>
+        </view>
+    </view>
+</view>
